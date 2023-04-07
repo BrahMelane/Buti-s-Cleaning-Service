@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+.top input,
+select,
+textarea {
+			background-color: #ccc;
+            padding: 1.4rem;
+    background: transparent;
+    border: 1px solid black;
+    margin-bottom: 10px;
+    margin-left: 25px;
+    border-radius: 5px;
+		
+			
+			padding: 20px;
+		}
+
+		.container {
+			display: flex;
+			flex-direction: row;
+		}
+
+		.box {
+			flex: 1;
+			background-color: #eee;
+			margin: 10px;
+            padding: 10px;
+			
+		}
+        .box input {
+            height: 25px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .box select{
+           margin-left:10px ;
+           border: none;
+           cursor: pointer;
+        }
+        textarea{
+    height: 6rem;
+    width: 300px;
+}
+.submit input{
+    height: 50px;
+    width: 120px;
+    cursor: pointer;
+    background: navy;
+    color: white;
+}
+    
+
+    
+    </style>
+</head>
+<body>
+   <form>
+    <div class="top">
+		<h1>Top Div</h1>
+        <input type="text" name="Name" placeholder="Full Name" required><br>
+    <input type="email" name="Email" placeholder="Email" required><br>
+    <input type="tel" name="Telephone" placeholder="Tel" required><br>
+    <select name="province" required>
+<option>Gauteng</option>
+<option>Western Cape</option>
+<option>Eastern Cape</option>
+<option>Northen Cape</option>
+<option>North West</option>
+<option>Limpopo</option>
+<option>Kwazulu-Natal</option>
+<option>Free State</option>
+<option>Mpumalanga</option>
+    </select><br>
+    <textarea  name="Message" placeholder="Message"></textarea><br>
+    
+       
+  
+    
+	</div>
+	<div class="container">
+		<div class="box">
+			<h2>Main Room</h2>
+            
+                <label for="dropdown1">Rooms:</label>
+                <select id="dropdown1" name="Main Room">
+                    <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                </select>
+                <br>
+                <label for="result1">Amoumt:</label><br>
+                <input type="text" id="result1" name="Main Room Amoumt" readonly>
+		</div>
+		<div class="box">
+			<h2>Guest Room</h2>
+            
+            <label for="dropdown2">Rooms:</label>
+        <select id="dropdown2" name="GuestRoom">
+            <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+        </select>
+        <br>
+        <label for="result2">Amoumt:</label><br>
+        <input type="text" id="result2" name="Guest Room Amoumt" readonly>
+		</div>
+		<div class="box">
+			<h2>Kiddies Room</h2>
+           
+                    <label for="dropdown3">Rooms:</label>
+                    <select id="dropdown3" name="Kiddies Room">
+                        <option value="0">0</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                    </select>
+                    <br>
+                    <label for="result3">Amoumt:</label><br>
+                    <input type="text" id="result3" name="Kiddies Room Amoumt" readonly>
+		</div>
+        <div class="box">
+			<h2>Garage</h2>
+            
+                    <label for="dropdown4">Garages:</label>
+                    <select id="dropdown4" name="Garage">
+                      <option value="0">0</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                    </select>
+                    <br>
+                    <label for="result4">Amoumt:</label><br>
+                    <input type="text" id="result4" name="Garage Amoumt" readonly>
+		</div>
+	</div>
+    <div class="submit"><input type="submit" value="Submit"></div>
+   </form>
+   <script>
+    const dropdown1 = document.getElementById("dropdown1");
+    const dropdown2 = document.getElementById("dropdown2");
+    const dropdown3 = document.getElementById("dropdown3");
+    const dropdown4 = document.getElementById("dropdown4");
+    const result1 = document.getElementById("result1");
+    const result2 = document.getElementById("result2");
+    const result3 = document.getElementById("result3");
+    const result4 = document.getElementById("result4");
+  
+    dropdown1.addEventListener("change", () => {
+      const value1 = parseInt(dropdown1.value);
+      result1.value = value1 * 5;
+    });
+  
+    dropdown2.addEventListener("change", () => {
+      const value2 = parseInt(dropdown2.value);
+      result2.value = value2 * 10;
+    });
+
+    dropdown3.addEventListener("change", () => {
+      const value3 = parseInt(dropdown3.value);
+      result3.value = value3 * 15;
+    });
+
+    dropdown4.addEventListener("change", () => {
+      const value4 = parseInt(dropdown4.value);
+      result4.value = value4 * 15;
+    });
+  </script>
+</body>
+</html>

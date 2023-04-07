@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Clean Home</title>
+     <style type="text/css">
+           .container {
+  display: flex;
+  height: 700px;
+  overflow: hidden;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: 100px;
+  margin-right: 100px;
+    }
+    .left {
+        font-size: 30px;
+  width: 70%;
+  float: left;
+  background-color: #ccc;
+  padding: 50px;
+  /*box-sizing: ;*/ 
+  background-image: url(images/background.jpg);
+  background-repeat: no-repeat;
+  background-position:50% 50%;
+  background-attachment: scroll;
+  
+    }
+    .right {
+  width: 30%;
+  float: right;
+  background-image: url(images/Meeting.jpg);
+    }
+    .right video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    }
+    video {
+  width: 100%;
+  height: 100%;
+  border: none;
+    }
+    .slogan{
+        
+        font-size: 20px;
+    }
+    .form{
+        background-color: gray;
+        padding: 50px;
+        display: flex;
+        
+    }
+    div{
+        background-color: white;
+    }
+    .option{
+        margin-right: 20px;
+    }
+    .bottom-space{
+            height: 50px;
+        }
+      footer{
+        background-color: #42788a;
+        padding: 0.5em 0;
+        height: 130px;
+        justify-content: center;
+        font-size: 15px;
+        text-align: center;
+    }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="left">
+            <h2>Finessed Webs Website<br>
+                Design
+                </h2>
+                <hr>
+                <p>Here at <b>Finessed Webs</b>, our priority is to assist small enterprises expand their businesses to the digital world! Most of business owners start their own businesses to become their own boss, driven by the desire to build something from the ground up. 
+                    <br>
+                    <p><p class="slogan"><b>“Let’s Make It Easy”</b><br></p>
+                    </p>
+
+        </div>
+        <div class="right">
+            <video src="images/"
+            poster="images/Meeting.jpg"
+            width="" height=""
+            autoplay
+            muted
+            loop></video>
+        </div>
+       </div>
+
+       <div class="bottom-space"></div>
+
+
+    <div class="form">
+        <div class="option"> <h1>Main BedRoom</h1>
+	
+            <label for="textView1">Number of Rooms</label>
+            <input type="text" name="Main Rooms" id="main" value="0" readonly><br><br>
+            
+            <label for="textView2">Total</label>
+            <input type="text" name="Main Rooms Amoumt" id="main2" value="0" readonly><br><br>
+            
+            <button onclick="addOne1()">Button 1</button>
+            <button onclick="subtractOne1()">Button 2</button>
+            <button onclick="multiplyByFive1()">Button 3</button>
+            
+            <script>
+                // Function to add one to the value in main
+                function addOne1() {
+                    var main = document.getElementById("main");
+                    var currentValue = parseInt(main.value);
+                    if (currentValue >= 0) {
+                    main.value = currentValue + 1;
+                    }
+                }
+                
+                // Function to subtract one from the value in main
+                function subtractOne1() {
+                    var main = document.getElementById("main");
+                    var currentValue = parseInt(main.value);
+                    if (currentValue > 0) {
+                    main.value = currentValue - 1;
+                    }
+                }
+                
+                // Function to multiply the value in main by 5 and show the result in textView2
+                function multiplyByFive1() {
+                    var main = document.getElementById("main");
+                    var main2 = document.getElementById("main2");
+                    var currentValue = parseInt(main.value);
+                    if (currentValue >= 0) {
+                        main2.value = currentValue * 550;
+                    }
+                }
+            </script></div>
+
+<div class="option"> <h1>Guest Room</h1>
+	
+    <label for="textView1">Number of Rooms</label>
+    <input type="text" id="guest" value="0" readonly><br><br>
+    
+    <label for="textView2">Total</label>
+    <input type="text" id="guest2" value="0" readonly><br><br>
+    
+    <button onclick="addOne2()">Button 1</button>
+    <button onclick="subtractOne2()">Button 2</button>
+    <button onclick="multiplyByFive2()">Button 3</button>
+    
+    <script>
+        // Function to add one to the value in textView1
+        function addOne2() {
+            var guest = document.getElementById("guest");
+            var currentValue = parseInt(guest.value);
+            if (currentValue >= 0) {
+            guest.value = currentValue + 1;
+            }
+        }
+        
+        // Function to subtract one from the value in textView1
+        function subtractOne2() {
+            var guest = document.getElementById("guest");
+            var currentValue = parseInt(guest.value);
+            if (currentValue > 0) {
+            guest.value = currentValue - 1;
+            }
+        }
+        
+        // Function to multiply the value in textView1 by 5 and show the result in textView2
+        function multiplyByFive2() {
+            var guest = document.getElementById("guest");
+            var guest2 = document.getElementById("guest2");
+            var currentValue = parseInt(guest.value);
+            if (currentValue >= 0) {
+            guest2.value = currentValue * 250;
+            }
+        }
+    </script></div>
+
+<div class="option"> <h1>Kiddies Room</h1>
+	
+    <label for="textView1">Number of Rooms</label>
+    <input type="text" id="Kiddies" value="0" readonly><br><br>
+    
+    <label for="textView2">Total</label>
+    <input type="text" id="Kiddies2" value="0" readonly><br><br>
+    
+    <button onclick="addOne()">Button 1</button>
+    <button onclick="subtractOne()">Button 2</button>
+    <button onclick="multiplyByFive()">Button 3</button>
+    
+    <script>
+        // Function to add one to the value in textView1
+        function addOne() {
+            var Kiddies = document.getElementById("Kiddies");
+            var currentValue = parseInt(Kiddies.value);
+            if (currentValue >= 0) {
+                Kiddies.value = currentValue + 1;
+            }
+        }
+        
+        // Function to subtract one from the value in textView1
+        function subtractOne() {
+            var Kiddies = document.getElementById("Kiddies");
+            var currentValue = parseInt(Kiddies.value);
+            if (currentValue > 0) {
+                Kiddies.value = currentValue - 1;
+            }
+        }
+        
+        // Function to multiply the value in textView1 by 5 and show the result in textView2
+        function multiplyByFive() {
+            var Kiddies = document.getElementById("Kiddies");
+            var Kiddies2 = document.getElementById("Kiddies2");
+            var currentValue = parseInt(Kiddies.value);
+            if (currentValue >= 0) {
+                Kiddies2.value = currentValue * 180;
+            }
+        }
+    </script></div>
+
+<div class="option"> <h1>Garage</h1>
+	
+    <label for="textView1">Number of Rooms</label>
+    <input type="text" id="garage" value="0" readonly><br><br>
+    
+    <label for="textView2">Total</label>
+    <input type="text" id="garage2" value="0" readonly><br><br>
+    
+    <button onclick="addOne()">Button 1</button>
+    <button onclick="subtractOne()">Button 2</button>
+    <button onclick="multiplyByFive()">Button 3</button>
+    
+    <script>
+        // Function to add one to the value in textView1
+        function addOne() {
+            var garage = document.getElementById("garage");
+            var currentValue = parseInt(garage.value);
+            if (currentValue >= 0) {
+                garage.value = currentValue + 1;
+            }
+        }
+        
+        // Function to subtract one from the value in textView1
+        function subtractOne() {
+            var garage = document.getElementById("garage");
+            var currentValue = parseInt(garage.value);
+            if (currentValue > 0) {
+                garage.value = currentValue - 1;
+            }
+        }
+        
+        // Function to multiply the value in textView1 by 5 and show the result in textView2
+        function multiplyByFive() {
+            var garage = document.getElementById("garage");
+            var garage2 = document.getElementById("garage2");
+            var currentValue = parseInt(garage.value);
+            if (currentValue >= 0) {
+                garage2.value = currentValue * 155;
+            }
+        }
+    </script></div>
+
+    </div>
+
+    <div class="bottom-space"></div>
+    <footer>
+      <p>&#169 Finessed Webs Website Design &#183 Tel: +27 67 112 2347 &#183 View our Social Media and don&#8217t forget to follow and like.
+      </p>
+      <p>Designed by FinessedWebs</p>
+    </footer>
+   
+</body>
+</html>
